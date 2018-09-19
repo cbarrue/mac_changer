@@ -7,6 +7,6 @@ mac=raw_input("Insert new MAC >")
 
 print("[+] Changing MAC address in %s to %s"%(interface,mac))
 
-subprocess.call("ifconfig %s down"%(interface),shell=True)
-subprocess.call("ifconfig %s hw ether %s"%(interface,mac),shell=True)
-subprocess.call("ifconfig %s up"%(interface),shell=True)
+subprocess.call(["ifconfig",interface,"down"])
+subprocess.call(["ifconfig",interface,"hw","ether",mac])
+subprocess.call(["ifconfig",interface,"up"])
