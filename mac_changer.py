@@ -2,8 +2,8 @@
 
 import subprocess
 
-interface="eth0"
-mac="00:00:00:00:00:11"
+interface=raw_input("Which interface? >")
+mac=raw_input("Insert new MAC >")
 
 print("[+] Changing MAC address in %s to %s"%(interface,mac))
 
